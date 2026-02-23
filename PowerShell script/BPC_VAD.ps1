@@ -4,9 +4,9 @@ $adomd_obj = Add-Type -Path $assemblyPath -PassThru
 $Connection_class = $adomd_obj | Where-Object {$_.FullName -eq 'Microsoft.AnalysisServices.AdomdClient.AdomdConnection'}
 $Adapter_class = $adomd_obj | Where-Object {$_.FullName -eq 'Microsoft.AnalysisServices.AdomdClient.AdomdDataAdapter'}
 
-$PowerBILogin = "ISCBI001@bd.com"
-$PowerBIPassword = "52SQ6I>*P+*63*Z"
-$PowerBIEndpoint = "powerbi://api.powerbi.com/v1.0/myorg/E2E%20Supply%20Chain%20Excellence"
+$PowerBILogin = "Email ID"
+$PowerBIPassword = "Password"
+$PowerBIEndpoint = "powerbi://api.powerbi.com/v1.0/myorg/Get-Date"
 $reportName = "Demand Reconciliation"
 
 $RunDate = Get-Date
@@ -106,4 +106,5 @@ $Results | export-csv -Path $ExportPath  -NoTypeInformation
 #$Results | Format-Table
 
 $Connection.Dispose()
+
 $Connection.Close()
